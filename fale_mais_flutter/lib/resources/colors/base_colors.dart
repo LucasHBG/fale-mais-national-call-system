@@ -10,8 +10,9 @@ abstract class BaseColors {
   //text color
   Color get colorPrimaryText;
   Color get colorNeutralText;
+  Color get colorAccentText;
 
   //extra color
-  Color get colorCustomWhite;
+  Color get colorBackgroundBox;
   Color get colorCustomBlack;
 }

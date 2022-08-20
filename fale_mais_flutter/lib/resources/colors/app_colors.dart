@@ -65,12 +65,15 @@ class AppColors implements BaseColors {
   Color get colorNeutralText => const Color(0xffC2CAF5);
 
   @override
+  Color get colorAccentText => const Color(0xff472500);
+
+  @override
   Color get colorPrimaryText => const Color(0xffC7CCE5);
 
   //Extra color
 
   @override
-  Color get colorCustomWhite => const Color(0xfff9f8f8);
+  Color get colorBackgroundBox => const Color(0xfff8f8f8);
 
   @override
   Color get colorCustomBlack => const Color(0xff000000);
