@@ -3,9 +3,11 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 
 import '/router/routes.dart';
-import 'res/app_context_extension.dart';
+import 'resources/app_context_extension.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -49,49 +51,31 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Builder(
-      builder: (BuildContext context) {
-        return MaterialApp.router(
-          routeInformationParser: router.routeInformationParser,
-          routerDelegate: router.routerDelegate,
-          routeInformationProvider: router.routeInformationProvider,
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            fontFamily: 'Roboto',
-            primarySwatch: context.resources.color.colorPrimary,
-            scaffoldBackgroundColor: context.resources.color.colorBackground,
-            backgroundColor: context.resources.color.colorBackground,
-            canvasColor: context.resources.color.colorBackground,
-            navigationBarTheme: NavigationBarThemeData(
+    return MultiProvider(
+      providers: [
+        Provider(
+          lazy: false,
+          create: (BuildContext createContext) => MyRouter(),
+        ),
+      ],
+      child: Builder(
+        builder: (BuildContext context) {
+          final GoRouter router =
+              Provider.of<MyRouter>(context, listen: false).router;
+          return MaterialApp.router(
+            routeInformationParser: router.routeInformationParser,
+            routerDelegate: router.routerDelegate,
+            routeInformationProvider: router.routeInformationProvider,
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              fontFamily: 'Roboto',
+              scaffoldBackgroundColor: context.resources.color.colorBackground,
               backgroundColor: context.resources.color.colorBackground,
-              // The color when the item is selected
-              indicatorColor: context.resources.color.colorNeutral,
-              iconTheme: MaterialStateProperty.resolveWith(
-                (states) {
-                  if (states.contains(MaterialState.selected)) {
-                    return IconThemeData(
-                        color: context.resources.color.colorSecondary);
-                  }
-
-                  return IconThemeData(
-                      color: context.resources.color.colorSecondary);
-                },
-              ),
-              labelTextStyle: MaterialStateProperty.resolveWith(
-                (states) {
-                  if (states.contains(MaterialState.selected)) {
-                    return TextStyle(
-                        color: context.resources.color.colorSecondary);
-                  }
-
-                  return TextStyle(
-                      color: context.resources.color.colorSecondary);
-                },
-              ),
+              canvasColor: context.resources.color.colorBackground,
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }
