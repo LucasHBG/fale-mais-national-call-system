@@ -6,6 +6,8 @@ class MyRouter {
   MyRouter();
 
   late final router = GoRouter(
+    debugLogDiagnostics: true,
+    urlPathStrategy: UrlPathStrategy.path,
     routes: [
       GoRoute(
         name: rootRouteName,
