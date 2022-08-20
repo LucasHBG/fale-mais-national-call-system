@@ -2,6 +2,10 @@ import 'package:fale_mais_flutter/resources/constants/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../view/home_page.dart';
+
+/// Class responsible to handle all routes and notify
+/// their changes to listeners.
 class MyRouter {
   MyRouter();
 
