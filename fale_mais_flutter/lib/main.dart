@@ -72,6 +72,11 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: context.resources.color.colorBackground,
               backgroundColor: context.resources.color.colorBackground,
               canvasColor: context.resources.color.colorBackground,
+              cardColor: context.resources.color.colorNeutral,
+              textTheme: Theme.of(context).textTheme.apply(
+                    displayColor: context.resources.color.colorPrimaryText,
+                    bodyColor: context.resources.color.colorPrimaryText,
+                  ),
             ),
           );
         },
