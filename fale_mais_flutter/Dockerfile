@@ -16,4 +16,4 @@ COPY . .
 
 RUN flutter doctor
 
-CMD ["flutter", "run"]
+RUN flutter build
