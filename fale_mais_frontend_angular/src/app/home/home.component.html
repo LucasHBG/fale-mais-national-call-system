@@ -1,14 +1,54 @@
-<div class="py-8 px-8 bg-base-100">
+<div class="py-8 px-8 bg-base-100 ">
     <!-- TODO Organize logo here  -->
-    <section>
-        <div class="content-center items-center">
-            <img src="../../assets/" alt="">
+    <section class="flex w-full justify-center">
+        <div class="align-top items-start">
+            <img src="../../assets/fale2.png" alt="FaleMais">
         </div>
     </section>
 
     <!-- ? Dial number in this section -->
-    <section>
-        <div class=""></div>
+    <section class="flex w-full content-center justify-center">
+
+        <div class="">
+            <!-- DDD Input text group  -->
+            <div class="grid grid-cols-2 gap-8">
+
+                <div>
+
+                    <!-- Origin DDD -->
+                    <label for="origin" class="label text-base-content">Origem</label>
+
+                    <input type="number" maxlength="3" id="origin" name="origin" placeholder="DDD"
+                        class="input w-24 h-20 bg-neutral text-2xl shadow-md" />
+                </div>
+
+                <div>
+
+                    <!-- Destiny DDD -->
+                    <label for="destiny" class="label text-base-content">Destino</label>
+
+                    <input type="number" maxlength="3" id="destiny" name="destiny" placeholder="DDD"
+                        class="input w-24 h-20 bg-neutral text-2xl shadow-md" />
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 ">
+
+                <div>
+
+                    <!-- Destiny DDD -->
+                    <label for="minutes" class="label text-base-content">Minutos</label>
+
+                    <input type="number" maxlength="5" id="minutes" name="minutes" placeholder="Minutos"
+                        class="input w-28 h-14 bg-neutral text-lg shadow-md"/>
+
+                </div>
+
+                <button class="btn btn-accent">Ligar</button>
+
+            </div>
+        </div>
     </section>
 
     <!-- ? Table with examples -->
@@ -21,7 +61,6 @@
                         <!-- head -->
                         <thead>
                             <tr>
-                                <th></th>
                                 <th>Origem</th>
                                 <th>Destino</th>
                                 <th>Tempo</th>
