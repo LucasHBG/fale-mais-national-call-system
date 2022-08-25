@@ -3,40 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:host {
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-  color: #333;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@layer base {
+  html {
+    font-family: Roboto, Proxima Nova, sans-serif;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 8px 0;
-}
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
-p {
-  margin: 0;
-}
-
-.spacer {
-  flex: 1;
-}
-
-footer {
-  margin-top: 8px;
-  display: flex;
-  align-items: center;
-  line-height: 20px;
-}
-
-footer a {
-  display: flex;
-  align-items: center;
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
