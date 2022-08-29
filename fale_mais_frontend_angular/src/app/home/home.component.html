@@ -7,47 +7,64 @@
     </section>
 
     <!-- ? Dial number in this section -->
-    <section class="flex w-full content-center justify-center">
+    <section class="flex w-full justify-center">
 
-        <div>
-            <!-- DDD Input text group  -->
-            <div class="grid grid-cols-2 gap-8">
+        <div class="grid grid-cols-1">
+            <form [formGroup]="callSimulatorForm" (ngSubmit)="onSubmit()">
+                <!-- DDD Input text group  -->
+                <div class="grid grid-cols-2 gap-6 lg:gap-12">
 
-                <div>
+                    <div>
 
-                    <!-- Origin DDD -->
-                    <label for="origin" class="label text-base-content">Origem</label>
+                        <!-- Origin DDD -->
+                        <label for="origin" class="label text-base-content">Origem</label>
 
-                    <input type="number" maxlength="3" id="origin" name="origin" placeholder="DDD"
-                        class="input w-24 h-20 bg-neutral text-2xl shadow-md" />
-                </div>
+                        <input type="number" formControlName="origin" maxlength="3" id="origin" name="origin"
+                            placeholder="DDD" class="input w-24 h-20 bg-neutral text-2xl shadow-md" />
+                    </div>
 
-                <div>
+                    <div>
 
-                    <!-- Destiny DDD -->
-                    <label for="destiny" class="label text-base-content">Destino</label>
+                        <!-- Destiny DDD -->
+                        <label for="destiny" class="label text-base-content">Destino</label>
 
-                    <input type="number" maxlength="3" id="destiny" name="destiny" placeholder="DDD"
-                        class="input w-24 h-20 bg-neutral text-2xl shadow-md" />
-                </div>
-
-            </div>
-
-            <div class="grid grid-cols-1 gap-8 ">
-
-                <div>
-
-                    <!-- Destiny DDD -->
-                    <label for="minutes" class="label text-base-content">Minutos</label>
-
-                    <input type="number" maxlength="5" id="minutes" name="minutes" placeholder="Minutos"
-                        class="input w-28 h-14 bg-neutral text-lg shadow-md"/>
+                        <input type="number" formControlName="destiny" maxlength="3" id="destiny" name="destiny"
+                            placeholder="DDD" class="input w-24 h-20 bg-neutral text-2xl shadow-md" />
+                    </div>
 
                 </div>
 
-                <button class="btn btn-accent">Ligar</button>
+                <div class="grid grid-cols-2 gap-6 lg:gap-12">
 
-            </div>
+                    <div>
+
+                        <!-- Set Minutes -->
+                        <label for="minutes" class="label text-base-content">Minutos</label>
+
+                        <input type="number" formControlName="minutes" maxlength="5" id="minutes" name="minutes"
+                            placeholder="Minutos" class="input w-28 md:w-36 h-14 bg-neutral text-lg shadow-md" />
+
+                    </div>
+
+                    <div class="w-full max-w-xs">
+                        <!-- Plan selection -->
+                        <label class="label text-base-content">Plano</label>
+
+                        <select formControlName="plan" class="select bg-neutral w-36 md:w-44 h-14 text-md md:text-lg shadow-md">
+                            <option disabled selected>Escolha um</option>
+                            <option *ngFor="let plan of plans" [ngValue]="plan"> {{ plan?.name }}</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="flex mt-4">
+                    <button type="submit" [disabled]="!callSimulatorForm.valid" class="btn btn-accent w-full">Ligar</button>
+                </div>
+
+            </form>
+
         </div>
     </section>
 
