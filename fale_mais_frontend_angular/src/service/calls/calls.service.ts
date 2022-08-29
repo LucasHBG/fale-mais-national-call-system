@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Calls } from 'src/shared/model/calls.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CallsService {
   mockedCalls: Calls[] = [];
 
