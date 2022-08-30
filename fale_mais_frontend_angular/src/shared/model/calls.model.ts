@@ -6,7 +6,7 @@ export interface Calls {
     destiny: number,
     minutes: number,
     plan: Plans,
-    withPlan: number,
-    noPlan: number,
+    withPlan: number | false,
+    withoutPlan: number | false,
 }
 
