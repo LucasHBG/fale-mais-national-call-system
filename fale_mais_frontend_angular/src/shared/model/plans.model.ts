@@ -1,4 +1,4 @@
 export interface Plans {
-    id?: string,
+    id?: number,
     name: string, 
 }
