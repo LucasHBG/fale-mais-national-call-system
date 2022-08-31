@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "538937556275",
+    "project_id": "fale-mais-national-call-system",
+    "storage_bucket": "fale-mais-national-call-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538937556275:android:ce6047776e4d76b58ad246",
+        "android_client_info": {
+          "package_name": "com.example.fale_mais_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538937556275-m3crgk70p7qg3b1rv3d3cdq9ivpsramq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK81BVDgN1beLwzXx6uKC3Ezxc3zc-GVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538937556275-m3crgk70p7qg3b1rv3d3cdq9ivpsramq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "538937556275-bo4t94hjmbnm6f763vntortbo8o1ovih.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.faleMaisFlutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
