@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       const SizedBox(height: 5),
                       // Minutes input TextField
-                      inputMinutesTextField(context),
+                      InputMinutesTextField(context: context),
                     ],
                   ),
                   ElevatedButton(
@@ -129,8 +129,18 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+}
 
-  ClipRRect inputMinutesTextField(BuildContext context) {
+class InputMinutesTextField extends StatelessWidget {
+  const InputMinutesTextField({
+    Key? key,
+    required this.context,
+  }) : super(key: key);
+
+  final BuildContext context;
+
+  @override
+  Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10.0),
       child: Container(
