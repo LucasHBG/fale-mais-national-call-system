@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       const SizedBox(height: 5),
-                      NumberOnlyInputBox(
+                      NumberOnlyRoundedInputBox(
                         context: context,
                         controller: _originDDD,
                         maxLengthTextInput: 2,
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       const SizedBox(height: 5),
-                      NumberOnlyInputBox(
+                      NumberOnlyRoundedInputBox(
                           context: context, controller: _destinyDDD),
                     ],
                   ),
