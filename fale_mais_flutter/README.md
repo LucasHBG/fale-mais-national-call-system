@@ -1,6 +1,6 @@
 # fale_mais_flutter
 
-This project was made for LOLDesign's Technical Challenge 
+This project was made to simulate costs from long distance calls and comparing the final price our client pay compared to no plan at all.
 
 ## Getting Started
 
