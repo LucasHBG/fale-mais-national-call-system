@@ -44,10 +44,12 @@ class _HomePageState extends State<HomePage> {
                 width: 365,
                 height: 300,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              GridView.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: 30.0,
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
                 children: [
-                  // First box which sets caller's DDD
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -85,10 +87,10 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.end,
+              GridView.count(
+                crossAxisCount: 2,
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
