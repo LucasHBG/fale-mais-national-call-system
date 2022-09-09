@@ -5,6 +5,8 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CallsComponent } from './home/calls/calls.component';
+import { CallsService } from 'src/service/calls/calls.service';
+import { PlansService } from 'src/service/plans/plans.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { CallsComponent } from './home/calls/calls.component';
     BrowserModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ CallsService, PlansService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
